@@ -4,6 +4,7 @@ void erroring() {
     cout << "I ain't doing that kind of stuff";
 
 }
+// какой это год високосный или невисокосный
 bool is_leap(int temp_year){
     if (temp_year % 4 == 0){
         if (temp_year % 100 == 0){
@@ -21,6 +22,7 @@ bool is_leap(int temp_year){
         return false;
     }
 }
+// введение года, месяц, день
 int main() {
     for (int i; i<1000; i++) {
         int year;
@@ -49,6 +51,7 @@ int main() {
         }
 
             }
+            // сколько дней в каждом месяце
             for ( int min = 1; min < month; min++){
                 switch (min) {
                     case 1:
@@ -95,15 +98,14 @@ int main() {
                 }
 
             }
+            // вывод какой день недели из набранной даты
             days_that_passed += day - 1;
         }
         int home = ((days_that_passed % 7 + 7) - 4) % 7;
         if (home < 0){
              home += 7;
         }
-        cout << home;
         string days_of_the_week[7] = {"Monday", "Tuesday","Wednesday", "Thursday","Friday","Saturday", "Sunday"} ;
         cout << days_of_the_week[home] << "\n";
-        cout<<days_that_passed << "\n";
     }
 }
